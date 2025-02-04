@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partial/header') %>
+    <h1> lista de compras</h1>
+
+    <p>O nome do meu cliente é: <%= nameOfTheClient %></p>
+
+    <ul>
+        <% for(let i=0; i < lista.length; i++) { %>
+            <li> <%= lista[i] %> </li>
+        <% } %>
+    </ul>
+
+    <form action="/main" method="get">
+        <button type="submit">Main</button>
+    </form>
+    <form action="/contacts" method="get">
+      <button type="submit">Contactos</button>
+    </form>
+</body>
+</html>
