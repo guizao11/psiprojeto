@@ -1,7 +1,6 @@
 {
   "name": "psiprojeto",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -16,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/guizao11/psiprojeto/issues"
   },
-  "homepage": "https://github.com/guizao11/psiprojeto#readme"
+  "homepage": "https://github.com/guizao11/psiprojeto#readme",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {},
+  "description": ""
 }

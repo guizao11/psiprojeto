@@ -33,6 +33,12 @@ app.get('/contacts', (req,res) => {
     res.render('contacts', { nameOfTheClient: name, lista: listaCompras});
 })
 
+app.post('/nova-compras', (req,res) => {
+    const lista = req.body.listadecompras;
+    res.send(lista);
+})
+
+
 
 app.listen(port, () => {
     console.log(`Example app listening on http://localhost:${3000}`)

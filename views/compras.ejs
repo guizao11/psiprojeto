@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script scr="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="user-form">
+        <label for="produtos"> Produtos </label>
+        <input type="text" name="quantidade" id="quantidade">
+        <label for="quantidade"> Quantidade </label>
+        <input type="text" name="quantidade" id="quantidade">
+        <button type="submit"> Submeter </button>
+    </form>
+
+    <script> 
+    const express = require('express')
+    const axios = require('axios')
+    const app = express()
+
+        document.getElementById('user-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            axios.post('/nova-compra', data)
+            .then(response => {
+                console.log('Sucess:', response.data);
+                location.reload();
+            })
+            .catch((error) => {
+                console.log('Error:', error);
+            })
+            
+            axios.post('/nova-compras', (listaDeCompras) => {
+                
+            })
+        });
+    </script>
+</body>
+</html>
